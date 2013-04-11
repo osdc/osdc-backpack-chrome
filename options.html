@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kippt Options</title>
+  <style type="text/css">
+    article {
+        font-family:"Helvetica Neue," Helvetica, Arial, sans-serif;
+        width:600px;
+        margin:50px auto 0 auto;
+    }
+    
+    h1 {
+        font-weight:normal;
+        margin:30px 0 0 0;
+    }
+    
+    ul {
+        list-style:none;
+        margin:0;
+        margin-left:200px;
+        padding:0;
+    }
+    
+    li {
+        margin-bottom:15px;
+    }
+
+    #share-buttons label {
+        padding-left: 10px;
+    }
+    
+    label {
+        color:#777;
+    }
+    
+    label img {
+        vertical-align:text-bottom;
+    }
+    
+    label span {
+        width:40px;
+        display:inline-block;
+        text-align:center;
+    }
+    
+    section {
+        margin:20px 0 0;
+        padding:40px 0 10px 0;
+        border-top:1px solid #ddd;
+    }
+    
+    h2 {
+        float:left;
+        width:180px;
+        font-size:16px;
+        margin:0;
+    }
+    
+    p {
+        float:left;
+        width:180px;
+        font-size:16px;
+        margin:0;
+    }
+    
+    .action {
+        padding:20px 0;
+        background:whitesmoke;
+    }
+    
+    button {
+        margin: 0 2px 0 0;
+        min-width: 73px;
+        background-color: #EFEFEF;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, #EFEFEF));
+        background-image: -webkit-linear-gradient(white, #EFEFEF);
+        box-shadow: 0 1px 1px #EEE;
+        font-weight: bold;
+        border: 1px solid #CCC;
+        border-top: 1px solid #DDD;
+        color: #333;
+        text-shadow: 0 1px 0px white;
+        border-bottom: 1px solid #AAA;
+        padding: 0.5em 0.8em;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-transition: 0.15s border-color linear;
+        white-space: nowrap;
+        vertical-align: middle;
+        font-size: 13px;
+        margin-left:200px;
+    }
+    
+    button:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+    
+    button:active {
+        background-image: -webkit-linear-gradient(#EFEFEF, white);
+    }
+  </style>
+</head>
+<body>
+    <article>
+        <h1>"On Your Face" Settings</h1>
+        <section class="share-buttons">
+            <ul id="other-options">
+                <li>
+                    <input type="checkbox" name="open_webkiosk" id="open_webkiosk" />
+                    <label for="id_sort_list_alphabatically">Open webkoisk</label>
+                </li>
+            </ul>
+        </section>
+    <section class="action">
+        <button>Save Changes</button>
+    </section>
+</article>
+
+<script type="text/javascript" src="js/vendor/jquery.js"></script>
+<script type="text/javascript" src="js/options.js"></script>
+</body>
+</html>
