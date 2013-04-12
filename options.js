@@ -10,10 +10,18 @@ $(function() {
         // Injection
         $.each(inject_inputs, function(i, name) {
             var sel = 'input[name=' + name + ']';
-            pref_json['name'] = $(sel).is(':checked');
+            pref_json[name] = $(sel).is(':checked');
         });
-
         localStorage['osdc_backpack_chrome_preferences'] = JSON.stringify(pref_json);
+
+        if($('input[name=open_webkiosk]').is(':checked'))
+            $(".awesome-message").css('opacity', 0).slideDown('fast').animate(
+                                                                                { opacity: 1 },
+                                                                                { queue: false, duration: 'slow' }
+                                                                              );
+
+        chrome.extension.getBackgroundPage().init();
+
     };
 
     // Restores select box state to saved value from localStorage.
@@ -24,8 +32,8 @@ $(function() {
         $.each(inject_inputs, function(key, value) {
             var sel = 'input[name=' + key + ']';
             var bool = value;
-            if (bool == undefined) bool = 'true';
-            $(sel).attr('checked', bool == 'true');
+            if (bool == undefined) bool = true;
+            $(sel).attr('checked', bool == true);
         });
     }
     
