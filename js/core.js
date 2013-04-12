@@ -12,6 +12,13 @@ var details = chrome.app.getDetails();
 
 init();
 
+// Icon click opens the options page.
+chrome.browserAction.onClicked.addListener(function() {
+	chrome.tabs.create({
+		url: "options.html"
+	});
+});
+
 // Background init method
 function init() {
 
