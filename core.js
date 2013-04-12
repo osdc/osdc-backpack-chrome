@@ -8,7 +8,7 @@ init();
 
 function init() {
 	if (!window.localStorage.osdc_backpack_chrome_preferences) {
-		window.localStorage.osdc_backpack_chrome_preferences = JSON.stringify({ "open_webkiosk": true});
+		//window.localStorage.osdc_backpack_chrome_preferences = JSON.stringify({ "open_webkiosk": true});
 	}
 	oscdBackpackChrome.preferences = JSON.parse(window.localStorage.osdc_backpack_chrome_preferences);
 }

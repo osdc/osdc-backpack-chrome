@@ -5,19 +5,25 @@ $(function() {
     // Saves options to localStorage.
     var save_options = function() {       
 
+        var pref_json = {}
+
         // Injection
         $.each(inject_inputs, function(i, name) {
             var sel = 'input[name=' + name + ']';
-            localStorage[name] = $(sel).is(':checked');
+            pref_json['name'] = $(sel).is(':checked');
         });
+
+        localStorage['osdc_backpack_chrome_preferences'] = JSON.stringify(pref_json);
     };
 
     // Restores select box state to saved value from localStorage.
     var restore_options = function() {
 
-        $.each(inject_inputs, function(i, name) {
-            var sel = 'input[name=' + name + ']';
-            var bool = localStorage[name];
+        var osdc_backpack_chrome_preferences = localStorage['osdc_backpack_chrome_preferences'];
+        var inject_inputs = JSON.parse(osdc_backpack_chrome_preferences);
+        $.each(inject_inputs, function(key, value) {
+            var sel = 'input[name=' + key + ']';
+            var bool = value;
             if (bool == undefined) bool = 'true';
             $(sel).attr('checked', bool == 'true');
         });
