@@ -1,23 +1,20 @@
 {	"name"					: "OSDC Backpack"
 , "version"				: "0.1"
-,	"minimum_chrome_version": "16.0"
-,	"manifest_version"		: 2
-,	"homepage_url"			: "https://github.com/osdc/osdc-backpack-chrome"
-//,	"update_url"			: "https://raw.github.com/maximelebreton/quick-javascript-switcher/master/updates.xml"
-,	"description"			: "OSDC backpack"
-
-,	"icons"					:
-		{ 
-		"128"				: "icon.png"
-		}
-
 ,	"permissions"			:
 		[ "tabs"
 		, "contentSettings"
 		, "contextMenus"
 		, "debugger"
 		]
+,	"minimum_chrome_version": "16.0"
+,	"manifest_version"		: 2
+,	"homepage_url"			: "https://github.com/osdc/osdc-backpack-chrome"
+,	"description"			: "OSDC backpack"
 
+,	"icons"					:
+		{ 
+		"128"				: "icon.png"
+		}
 ,	"browser_action"		:
 		{ "default_icon"	: "icon.png"
 		}
